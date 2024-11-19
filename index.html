@@ -1,12 +1,30 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Web App</title>
+    <script>
+        function displayName() {
+            // Get the value of the input field
+            var username = document.getElementById("username").value;
+            // Set the welcome message text
+            document.getElementById("welcome-message").innerText = "Welcome, " + username + "!";
+        }
+    </script>
+</head>
 <body>
-    <h1>Welcome to the Web App3!</h1>
-    <form action="/" method="POST">
-        Name: <input type="text" name="username">
+    <h1>Welcome to the Web App!</h1>
+
+    <!-- Form to input name -->
+    <form action="javascript:void(0);" onsubmit="displayName()">
+        <label for="username">Enter your name:</label>
+        <input type="text" id="username" name="username" required>
         <input type="submit" value="Submit">
     </form>
 
     <h2>Your Name: </h2>
+    <!-- Display the entered name here -->
     <p id="welcome-message"></p>
 </body>
 </html>
